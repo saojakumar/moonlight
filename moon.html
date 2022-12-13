@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="moo.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Abouts</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact's</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountainsb">
+        <h2 id="text">MoonLight</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountainsf">
+    </section>
+    <div class="sec" id="sec">
+       <h2>Parallax scrolling Effects</h2>
+       <p>Facts About The Moon The Moon is Earth’s only natural satellite and the fifth largest moon in the solar system. 
+        The Moon’s presence helps stabilize our planet’s wobble and moderate our climate.
+         The Moon’s distance from Earth is about 240,000 miles (385,000km). The Moon has a very thin atmosphere called an exosphere.
+         The Moon is Earth's only proper natural satellite. At one-quarter the diameter of Earth (comparable to the width of Australia), 
+         it is the largest natural satellite in the Solar System relative to the size of its planet,
+          and the fifth largest satellite in the Solar System overall (larger than any dwarf planet).
+        <br>
+        <br>
+        Our lunar neighbor has inspired stories since the first humans looked up at the sky and saw its gray, cratered surface. 
+        Some observers saw among the craters the shape of a person's face, so stories refer to a mysterious "man in the Moon."
+         Hungrier observers compared the craters to cheese and dreamed of an entire sphere made of delicious dairy products.
+        <br>
+        <br>
+        The Moon made its film debut in a 1902 black and white silent French film called "Le Voyage Dans la Lune" ("A Trip to the Moon").
+         And a year before astronauts walked on the Moon, "2001: A Space Odyssey" (1968) told the story of astronauts on an outpost on the Moon. Decades later,
+         it is still widely regarded as one of the best science fiction movies ever made.
+        <br>
+        <br>
+        American astronauts have planted six American flags on the Moon. But that doesn't mean the United States has claimed it; in fact, 
+        an international law written in 1967 prevents any single nation from owning planets,
+         stars, or any other natural objects in space.
+        <br>
+        <br>
+        Most of the planets in our solar system – and some asteroids – have moons. Earth has one moon.
+         We call it "the Moon" because for a long time it was the only one we knew about.
+         Many languages have beautiful names for our Moon. It is "Luna" in Italian, 
+        Latin, and Spanish, "Lune" in French, "Mond" in German, and "Selene" in Greek.
+        <br>
+        <br>
+        Chances are that when you imagine the night sky, one of the first things that comes to mind is the Moon “glowing” in the darkness.
+         The Moon has always held a special place in our imaginations and in daily life.
+         <br>
+         <br>
+         From Earth, it might look like the Moon is changing shape each night – from a tiny sliver to a half moon to a full moon and back again. 
+         What’s actually happening is that from our spot on Earth,
+          we see different parts of the Moon lit up by the Sun as the Moon travels in its orbit.
+        </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountainsb = document.getElementById('mountainsb');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountainsf = document.getElementById('mountainsf');
+        let header = document.querySelector('header');
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value* 0.25 + 'px';
+            moon.style.top = value* 1.05 + 'px';
+            mountainsb.style.top = value* 0.5 + 'px';
+            mountainsb.style.top = value* 0 + 'px';
+            text.style.marginRight = value* 4 + 'px';
+            text.style.marginTop = value* 1.5 + 'px';
+            btn.style.marginTop = value* 1.5 + 'px';
+            header.style.top = value* 0.5 + 'px';
+            
+        })
+    </script>
+</body>
+</html>
